@@ -15,6 +15,8 @@ public class Explosion : MonoBehaviour {
     public float explosionUpward = 0.4f;
     public Material mat;
 
+    public GameOverManager gameOverManager;
+
     // Use this for initialization
     void Start() {
 
@@ -35,9 +37,12 @@ public class Explosion : MonoBehaviour {
         if (other.gameObject.name == "Obs") {
             explode();
             Time.timeScale = 0.3f;
+            gameOverManager.GameOver();
         }
 
     }
+
+    
 
     public void explode() {
         //make object disappear

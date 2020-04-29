@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class GameOverManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject gameOverUI;
+    PointManager pointManager;
+    public UserData userDataA, userDataB;
+
+    private void Start()
     {
-        
+        pointManager = GetComponent<PointManager>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void GameOver()
     {
-        
+        StartCoroutine(delayGameOver());
+    }
+
+    IEnumerator delayGameOver()
+    {
+        yield return new WaitForSeconds(0.7f);
+        gameOverUI.SetActive(true);
+        if(userDataA.highestScore < pointManager.poinA)
+        {
+            userDataA.highestScore = pointManager.poinA;
+        }
+        if (userDataB.highestScore < pointManager.poinB)
+        {
+            userDataB.highestScore = pointManager.poinB;
+        }
+        Time.timeScale = 0f;
+
     }
 }
