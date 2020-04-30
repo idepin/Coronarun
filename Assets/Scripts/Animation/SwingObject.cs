@@ -5,11 +5,13 @@ using UnityEngine;
 public class SwingObject : MonoBehaviour
 {
     public float time = 1f;
-    public float to = 2f;
+    public float add = 35f;
+    public Vector3 angle;
+
     // Start is called before the first frame update
     void Start()
     {
-        LeanTween.rotateAround(gameObject, Vector3.back, to, time).setEaseInOutSine().setLoopPingPong();
+        LeanTween.rotateAround(gameObject, angle, add, time).setEaseInOutSine().setLoopPingPong();
     }
 
     // Update is called once per frame
