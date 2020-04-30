@@ -13,7 +13,6 @@ public class Explosion : MonoBehaviour {
     public float explosionForce = 50f;
     public float explosionRadius = 4f;
     public float explosionUpward = 0.4f;
-    public Material mat;
 
     public GameOverManager gameOverManager;
     public PointManager pointManager;
@@ -21,7 +20,7 @@ public class Explosion : MonoBehaviour {
 
     public AudioClip brokenAudio;
     AudioSource audioSource;
-
+    Material mat;
     public GameObject playerA, playerB;
 
     public enum Player
@@ -33,6 +32,11 @@ public class Explosion : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
+        mat = GetComponent<Renderer>().material;
+        if (player == Player.PlayerA)
+            mat.color = gameOverManager.userDataA.boxColor;
+        else
+            mat.color = gameOverManager.userDataB.boxColor;
 
         audioSource = gameOverManager.gameObject.GetComponent<AudioSource>();
         //calculate pivot distance
