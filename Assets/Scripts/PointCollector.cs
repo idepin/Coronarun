@@ -14,9 +14,10 @@ public class PointCollector : MonoBehaviour
 
     public Player player;
 
-    private void OnCollisionEnter(Collision collision)
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.name == "ItemA")
+        if (other.gameObject.name == "ItemA")
         {
             if (player == Player.playerA)
             {
@@ -27,9 +28,9 @@ public class PointCollector : MonoBehaviour
                 pointManager.poinB += pointManager.poinItemA;
             }
             pointManager.GetComponent<AudioSource>().PlayOneShot(audioClip);
-            Destroy(collision.gameObject);
+            Destroy(other.gameObject);
         }
-        if (collision.gameObject.name == "ItemB")
+        if (other.gameObject.name == "ItemB")
         {
             if (player == Player.playerA)
             {
@@ -40,36 +41,7 @@ public class PointCollector : MonoBehaviour
                 pointManager.poinB += pointManager.poinItemB;
             }
             pointManager.GetComponent<AudioSource>().PlayOneShot(audioClip);
-            Destroy(collision.gameObject);
+            Destroy(other.gameObject);
         }
     }
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.gameObject.name == "ItemA")
-    //    {
-    //        if(player == Player.playerA)
-    //        {
-    //            pointManager.poinA += pointManager.poinItemA;
-    //        }
-    //        else
-    //        {
-    //            pointManager.poinB += pointManager.poinItemA;
-    //        }
-    //        pointManager.GetComponent<AudioSource>().PlayOneShot(audioClip);
-    //        Destroy(other.gameObject);
-    //    }
-    //    if (other.gameObject.name == "ItemB")
-    //    {
-    //        if (player == Player.playerA)
-    //        {
-    //            pointManager.poinA += pointManager.poinItemB;
-    //        }
-    //        else
-    //        {
-    //            pointManager.poinB += pointManager.poinItemB;
-    //        }
-    //        pointManager.GetComponent<AudioSource>().PlayOneShot(audioClip);
-    //        Destroy(other.gameObject);
-    //    }
-    //}
 }
