@@ -9,12 +9,24 @@ public class LoadingManager : MonoBehaviour
 
     public GameObject loadingScreen;
     public Slider slider;
+    public GameObject exitPanel;
     // Start is called before the first frame update
     void Start()
     {
         
+
     }
 
+    public void ExitApp()
+    {
+        Application.Quit();
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape)){
+            exitPanel.SetActive(true);
+        }
+    }
     public void LoadScene(int index)
     {
         StartCoroutine(LoadAsynchronously(index));
