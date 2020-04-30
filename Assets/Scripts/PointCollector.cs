@@ -15,7 +15,7 @@ public class PointCollector : MonoBehaviour
     public Player player;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "Item")
+        if (other.gameObject.name == "ItemA")
         {
             if(player == Player.playerA)
             {
@@ -24,6 +24,19 @@ public class PointCollector : MonoBehaviour
             else
             {
                 pointManager.poinB += pointManager.poinItemA;
+            }
+            pointManager.GetComponent<AudioSource>().PlayOneShot(audioClip);
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.name == "ItemB")
+        {
+            if (player == Player.playerA)
+            {
+                pointManager.poinA += pointManager.poinItemB;
+            }
+            else
+            {
+                pointManager.poinB += pointManager.poinItemB;
             }
             pointManager.GetComponent<AudioSource>().PlayOneShot(audioClip);
             Destroy(other.gameObject);

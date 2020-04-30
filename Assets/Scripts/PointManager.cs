@@ -6,7 +6,7 @@ using TMPro;
 public class PointManager : MonoBehaviour
 {
     public float poinA, poinB;
-    public float poinItemA;
+    public float poinItemA, poinItemB;
     public TextMeshProUGUI txtPoinA, txtPoinB;
     public GameObject playerA, playerB;
     // Start is called before the first frame update
