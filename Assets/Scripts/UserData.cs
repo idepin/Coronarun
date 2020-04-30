@@ -5,4 +5,5 @@ public class UserData : ScriptableObject
 {
     public string username;
     public float highestScore;
+    public Color boxColor;
 }

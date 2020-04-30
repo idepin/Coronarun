@@ -4552,13 +4552,17 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Very Low
+    - m_Text: Fastest
       m_Image: {fileID: 0}
-    - m_Text: Low
+    - m_Text: Fast
       m_Image: {fileID: 0}
-    - m_Text: Medium
+    - m_Text: Simple
       m_Image: {fileID: 0}
-    - m_Text: High
+    - m_Text: Good
+      m_Image: {fileID: 0}
+    - m_Text: Beautiful
+      m_Image: {fileID: 0}
+    - m_Text: Fantastic
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
