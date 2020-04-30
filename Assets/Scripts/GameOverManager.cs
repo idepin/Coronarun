@@ -40,8 +40,26 @@ public class GameOverManager : MonoBehaviour
         {
             txtPlayerWin.SetText(userDataB.username + " Win!");
             txtScore.SetText(pointManager.poinB.ToString("F0"));
+        }else if(pointManager.poinA == pointManager.poinB)
+        {
+            txtPlayerWin.SetText("Draw!");
         }
     }
+
+    public void SlowMotion()
+    {
+        StartCoroutine(StartSlowMotion());
+    }
+
+    IEnumerator StartSlowMotion()
+    {
+        Time.timeScale = 0.4f;
+        Time.fixedDeltaTime = Time.timeScale * .02f;
+        yield return new WaitForSeconds(0.7f);
+        Time.timeScale = 1f;
+        Time.fixedDeltaTime = Time.timeScale * .02f;
+    }
+
 
     IEnumerator delayGameOver()
     {

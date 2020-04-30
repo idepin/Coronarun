@@ -8,6 +8,7 @@ public class PointManager : MonoBehaviour
     public float poinA, poinB;
     public float poinItemA;
     public TextMeshProUGUI txtPoinA, txtPoinB;
+    public GameObject playerA, playerB;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,18 +18,20 @@ public class PointManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(txtPoinA != null)
+        txtPoinA.SetText(poinA.ToString("F0"));
+        txtPoinB.SetText(poinB.ToString("F0"));
+
+        if (txtPoinA != null && playerA.activeInHierarchy)
         {
             poinA += Time.deltaTime * 0.5f;
-            txtPoinA.SetText(poinA.ToString("F0"));
+
         }
 
-        if(txtPoinB != null)
+        if (txtPoinB != null && playerB.activeInHierarchy)
         {
             poinB += Time.deltaTime * 0.5f;
-            txtPoinB.SetText(poinB.ToString("F0"));
+
         }
-        
         
     }
 }

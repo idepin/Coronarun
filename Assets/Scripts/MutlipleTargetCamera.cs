@@ -15,6 +15,7 @@ public class MutlipleTargetCamera : MonoBehaviour
         Vector3 centerPoint = GetCenterPoint();
         Vector3 newPosition = centerPoint + offset;
         transform.position = newPosition;
+       
     }
 
     Vector3 GetCenterPoint()

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     Rigidbody rb;
-    public float speed;
+    public float speed, maxSpeed;
     public float jumpPower;
     float distToGround;
     public string buttonName;
@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
     }
 private void FixedUpdate()
     {
-        if(speed < 2f)
+        if(speed < maxSpeed)
             speed += 0.005f * Time.deltaTime;
 
         rb.MovePosition(rb.position + Vector3.forward * speed);

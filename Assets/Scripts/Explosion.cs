@@ -17,9 +17,12 @@ public class Explosion : MonoBehaviour {
 
     public GameOverManager gameOverManager;
     public PointManager pointManager;
+    public MutlipleTargetCamera mutlipleTargetCamera;
 
     public AudioClip brokenAudio;
     AudioSource audioSource;
+
+    public GameObject playerA, playerB;
 
     public enum Player
     {
@@ -51,19 +54,26 @@ public class Explosion : MonoBehaviour {
             if(player == Player.PlayerA)
             {
                 pointManager.poinA -= 1;
+                mutlipleTargetCamera.targets.Remove(playerA.transform);
             }
             else
             {
                 pointManager.poinB -= 1;
+                mutlipleTargetCamera.targets.Remove(playerB.transform);
             }
-            Time.timeScale = 0.4f;
-            Time.fixedDeltaTime = Time.timeScale * .02f;
-            gameOverManager.GameOver();
+
+            gameOverManager.SlowMotion();
+            
+            if(mutlipleTargetCamera.targets.Count == 0)
+            {
+                gameOverManager.GameOver();
+            }
+            
         }
 
     }
 
-    
+   
 
     public void explode() {
         //make object disappear
@@ -108,6 +118,7 @@ public class Explosion : MonoBehaviour {
         //add rigidbody and set mass
         piece.AddComponent<Rigidbody>();
         piece.GetComponent<Rigidbody>().mass = cubeSize;
+        Destroy(piece, 5f);
     }
 
 }
