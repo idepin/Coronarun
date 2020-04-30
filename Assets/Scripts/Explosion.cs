@@ -16,11 +16,22 @@ public class Explosion : MonoBehaviour {
     public Material mat;
 
     public GameOverManager gameOverManager;
+    public PointManager pointManager;
+
+    public AudioClip brokenAudio;
+    AudioSource audioSource;
+
+    public enum Player
+    {
+        PlayerA = 1,
+        PlayerB = 2
+    }
+    public Player player;
 
     // Use this for initialization
     void Start() {
 
-        
+        audioSource = gameOverManager.gameObject.GetComponent<AudioSource>();
         //calculate pivot distance
         cubesPivotDistance = cubeSize * cubesInRow / 2;
         //use this value to create pivot vector)
@@ -36,7 +47,17 @@ public class Explosion : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.name == "Obs") {
             explode();
-            Time.timeScale = 0.3f;
+            audioSource.PlayOneShot(brokenAudio);
+            if(player == Player.PlayerA)
+            {
+                pointManager.poinA -= 1;
+            }
+            else
+            {
+                pointManager.poinB -= 1;
+            }
+            Time.timeScale = 0.4f;
+            Time.fixedDeltaTime = Time.timeScale * .02f;
             gameOverManager.GameOver();
         }
 

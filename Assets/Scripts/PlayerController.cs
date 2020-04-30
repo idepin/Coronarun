@@ -42,7 +42,9 @@ public class PlayerController : MonoBehaviour
     }
 private void FixedUpdate()
     {
-        
+        if(speed < 2f)
+            speed += 0.005f * Time.deltaTime;
+
         rb.MovePosition(rb.position + Vector3.forward * speed);
         if (IsGrounded())
         {
