@@ -3564,7 +3564,7 @@ Transform:
   m_GameObject: {fileID: 827644930}
   m_LocalRotation: {x: 0.70710677, y: -0.00000008940696, z: -0, w: 0.7071069}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.7246858, y: 1.7246858, z: 59.759876}
+  m_LocalScale: {x: 1.7246858, y: 2.1635563, z: 59.759876}
   m_Children: []
   m_Father: {fileID: 1161867481}
   m_RootOrder: 4
@@ -5466,7 +5466,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1090296533
 Transform:
   m_ObjectHideFlags: 0
@@ -6431,7 +6431,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 56.15
+  m_fontSize: 56.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6911,6 +6911,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7705173928964926673, guid: f3d626d731886ee479d1ef110500cc15,
+        type: 3}
+      propertyPath: xSpeed
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3d626d731886ee479d1ef110500cc15, type: 3}
@@ -9041,7 +9046,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 56.15
+  m_fontSize: 56.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -9141,7 +9146,7 @@ Transform:
   m_GameObject: {fileID: 1852989646}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.7246858, y: 1.7246858, z: 59.759876}
+  m_LocalScale: {x: 1.7246858, y: 2.3072846, z: 59.759876}
   m_Children: []
   m_Father: {fileID: 1161867481}
   m_RootOrder: 3
