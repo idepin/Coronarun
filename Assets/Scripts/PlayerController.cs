@@ -9,9 +9,9 @@ public class PlayerController : MonoBehaviour
     public float speed, maxSpeed;
     public float jumpPower;
     float distToGround;
-    public string buttonName;
 
-    float jumpPressure;
+    public string buttonName;
+    public float jumpPressure;
     float minJump;
     float maxjumpPressure;
 
@@ -49,7 +49,7 @@ private void FixedUpdate()
         rb.MovePosition(rb.position + Vector3.forward * speed);
         if (IsGrounded())
         {
-            if (getButton)
+            if (getButton || Input.GetButton(buttonName))
             {
                 if (jumpPressure < maxjumpPressure)
                 {
@@ -62,7 +62,7 @@ private void FixedUpdate()
             }
             else
             {
-                if (getButtonUp)
+                if (getButtonUp || Input.GetButtonUp(buttonName))
                 {
                     rb.AddTorque(Vector3.right * 900);
                     print("lepas");
