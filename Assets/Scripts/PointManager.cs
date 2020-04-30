@@ -26,12 +26,15 @@ public class PointManager : MonoBehaviour
             poinA += Time.deltaTime * 0.5f;
 
         }
-
-        if (txtPoinB != null && playerB.activeInHierarchy)
+        if(playerB != null)
         {
-            poinB += Time.deltaTime * 0.5f;
+            if (txtPoinB != null && playerB.activeInHierarchy)
+            {
+                poinB += Time.deltaTime * 0.5f;
 
+            }
         }
+        
         
     }
 }

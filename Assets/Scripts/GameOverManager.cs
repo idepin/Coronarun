@@ -33,7 +33,11 @@ public class GameOverManager : MonoBehaviour
         StartCoroutine(delayGameOver());
         if(pointManager.poinA > pointManager.poinB)
         {
-            txtPlayerWin.SetText(userDataA.username + " Win!");
+            if(pointManager.playerB != null)
+                txtPlayerWin.SetText(userDataA.username + " Win!");
+            else
+                txtPlayerWin.SetText(userDataA.username);
+
             txtScore.SetText(pointManager.poinA.ToString("F0"));
         }
         else if(pointManager.poinB > pointManager.poinA)

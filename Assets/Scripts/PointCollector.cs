@@ -5,7 +5,7 @@ using UnityEngine;
 public class PointCollector : MonoBehaviour
 {
     public PointManager pointManager;
-    public AudioClip audioClip;
+    public AudioClip audioClip, audioClip2;
     public enum Player
     {
         playerA = 1,
@@ -40,7 +40,7 @@ public class PointCollector : MonoBehaviour
             {
                 pointManager.poinB += pointManager.poinItemB;
             }
-            pointManager.GetComponent<AudioSource>().PlayOneShot(audioClip);
+            pointManager.GetComponent<AudioSource>().PlayOneShot(audioClip2);
             Destroy(other.gameObject);
         }
     }
