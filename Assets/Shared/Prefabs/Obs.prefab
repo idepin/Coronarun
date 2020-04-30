@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 935255050217768297}
   - component: {fileID: 6901266048584333712}
   - component: {fileID: 8972091653291290806}
+  - component: {fileID: 8193488822731552361}
   m_Layer: 0
   m_Name: Obs
   m_TagString: Untagged
@@ -26,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5186720586772450636}
-  m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
-  m_LocalPosition: {x: 0, y: 8.53, z: -110.88}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 0, y: 9, z: -109.91}
   m_LocalScale: {x: 30, y: 30, z: 30}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &935255050217768297
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -59,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 043e294fb7dc89f488d40f0405974b48, type: 2}
+  - {fileID: 2100000, guid: 494d26e0be67e014bb9b39b5ac7ee298, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93,3 +94,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.015238476
   m_Center: {x: 0.0000000027939677, y: -3.3087225e-24, z: 4.6566123e-10}
+--- !u!114 &8193488822731552361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5186720586772450636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a02edf032f17b44a3ae42429f8b9c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xSpeed: 0
+  ySpeed: 1
+  zSpeed: 1
