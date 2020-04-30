@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ca678fdf2c5b0a4cac4bc324a3cadd3, type: 3}
   m_Name: PlayerB
   m_EditorClassIdentifier: 
-  username: User B
-  highestScore: 42.062172
-  boxColor: {r: 0.9725491, g: 1, b: 0.60784316, a: 1}
+  username: Player 2
+  highestScore: 0
+  boxColor: {r: 1, g: 0.4431373, b: 0.7686275, a: 1}
