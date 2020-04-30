@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1693928110396154096
+--- !u!1 &5221556885926828923
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2439072468739085027}
-  - component: {fileID: 6665984697797961941}
-  - component: {fileID: 1134586772582569004}
-  - component: {fileID: 3704738301986265099}
-  - component: {fileID: 5136141570188921198}
+  - component: {fileID: 9092182202006841704}
+  - component: {fileID: 249647642755208030}
+  - component: {fileID: 5785547026565164967}
+  - component: {fileID: 4275991119611650430}
+  - component: {fileID: 4275991119611650429}
   m_Layer: 0
-  m_Name: Coin
+  m_Name: RingTajam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2439072468739085027
+--- !u!4 &9092182202006841704
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1693928110396154096}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0, y: 13.55, z: -75.15}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_GameObject: {fileID: 5221556885926828923}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0, y: 7.89, z: -35.7}
+  m_LocalScale: {x: 1, y: 1, z: 0.16265458}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6665984697797961941
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!33 &249647642755208030
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1693928110396154096}
-  m_Mesh: {fileID: 2534964839176971238, guid: 4125ba18fbc512f43bbcb7d0e1c88ad2, type: 3}
---- !u!23 &1134586772582569004
+  m_GameObject: {fileID: 5221556885926828923}
+  m_Mesh: {fileID: -8264766115119967290, guid: d05937f407c53014caa0bce9d0df7f34, type: 3}
+--- !u!23 &5785547026565164967
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1693928110396154096}
+  m_GameObject: {fileID: 5221556885926828923}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c9bdb6bd743fdc44ca488da3ab89d86b, type: 2}
+  - {fileID: 2100000, guid: 7f5df767045ad39478023259c1d2a963, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -81,13 +81,27 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3704738301986265099
+--- !u!64 &4275991119611650430
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5221556885926828923}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8264766115119967290, guid: d05937f407c53014caa0bce9d0df7f34, type: 3}
+--- !u!114 &4275991119611650429
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1693928110396154096}
+  m_GameObject: {fileID: 5221556885926828923}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7a02edf032f17b44a3ae42429f8b9c0, type: 3}
@@ -95,17 +109,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xSpeed: 0
   ySpeed: 0
-  zSpeed: 2
---- !u!65 &5136141570188921198
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1693928110396154096}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.01, y: 0.0019999999, z: 0.009999998}
-  m_Center: {x: 0, y: 0, z: 0}
+  zSpeed: 5
