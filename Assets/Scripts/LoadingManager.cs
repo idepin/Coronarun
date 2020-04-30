@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LoadingManager : MonoBehaviour
 {
+
+    public GameObject loadingScreen;
+    public Slider slider;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,12 +17,20 @@ public class LoadingManager : MonoBehaviour
 
     public void LoadScene(int index)
     {
-        SceneManager.LoadSceneAsync(index);
+        StartCoroutine(LoadAsynchronously(index));
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator LoadAsynchronously(int sceneIndex)
     {
-        
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
+
+        loadingScreen.SetActive(true);
+        while (!operation.isDone)
+        {
+            float progress = Mathf.Clamp01(operation.progress / .9f);
+
+            slider.value = progress;
+            yield return null;
+        }
     }
 }
