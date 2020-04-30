@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
     }
     bool IsGrounded(){
         return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.3f);
+        
     }
 private void FixedUpdate()
     {
@@ -57,9 +58,7 @@ private void FixedUpdate()
                 else
                 {
                     jumpPressure = maxjumpPressure;
-                }
-                
-                
+                }    
             }
             else
             {

@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: PlayerB
   m_EditorClassIdentifier: 
   username: User B
-  score: 27.744196
+  highestScore: 0
+  boxColor: {r: 1, g: 0, b: 0, a: 0}

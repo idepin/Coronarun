@@ -14,6 +14,12 @@ public class SettingsManager : MonoBehaviour
         
     }
 
+    public void UpdateUI()
+    {
+        dropdownQuality.value = QualitySettings.GetQualityLevel();
+        sliderVolume.value = AudioListener.volume;
+    }
+
     public void SetVolume(float volume)
     {
         AudioListener.volume = volume;
