@@ -12,7 +12,7 @@ public class PointManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        poinItemA = 22f;
+        //poinItemA = 22f;
     }
 
     // Update is called once per frame
