@@ -13,11 +13,12 @@ public class PointCollector : MonoBehaviour
     }
 
     public Player player;
-    private void OnTriggerEnter(Collider other)
+
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.name == "ItemA")
+        if (collision.gameObject.name == "ItemA")
         {
-            if(player == Player.playerA)
+            if (player == Player.playerA)
             {
                 pointManager.poinA += pointManager.poinItemA;
             }
@@ -26,9 +27,9 @@ public class PointCollector : MonoBehaviour
                 pointManager.poinB += pointManager.poinItemA;
             }
             pointManager.GetComponent<AudioSource>().PlayOneShot(audioClip);
-            Destroy(other.gameObject);
+            Destroy(collision.gameObject);
         }
-        if (other.gameObject.name == "ItemB")
+        if (collision.gameObject.name == "ItemB")
         {
             if (player == Player.playerA)
             {
@@ -39,7 +40,36 @@ public class PointCollector : MonoBehaviour
                 pointManager.poinB += pointManager.poinItemB;
             }
             pointManager.GetComponent<AudioSource>().PlayOneShot(audioClip);
-            Destroy(other.gameObject);
+            Destroy(collision.gameObject);
         }
     }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.name == "ItemA")
+    //    {
+    //        if(player == Player.playerA)
+    //        {
+    //            pointManager.poinA += pointManager.poinItemA;
+    //        }
+    //        else
+    //        {
+    //            pointManager.poinB += pointManager.poinItemA;
+    //        }
+    //        pointManager.GetComponent<AudioSource>().PlayOneShot(audioClip);
+    //        Destroy(other.gameObject);
+    //    }
+    //    if (other.gameObject.name == "ItemB")
+    //    {
+    //        if (player == Player.playerA)
+    //        {
+    //            pointManager.poinA += pointManager.poinItemB;
+    //        }
+    //        else
+    //        {
+    //            pointManager.poinB += pointManager.poinItemB;
+    //        }
+    //        pointManager.GetComponent<AudioSource>().PlayOneShot(audioClip);
+    //        Destroy(other.gameObject);
+    //    }
+    //}
 }
